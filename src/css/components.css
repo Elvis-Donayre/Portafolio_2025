@@ -404,6 +404,197 @@
   transform: translateX(0);
 }
 
+
+
+/* ==========================================================================
+   EXPERIENCE TIMELINE
+   ========================================================================== */
+
+.experience__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gradient-primary);
+  transform: translateX(-50%);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.experience-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.experience-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.experience-item:nth-child(odd) .experience-item__content {
+  margin-right: var(--spacing-lg);
+  text-align: right;
+}
+
+.experience-item:nth-child(even) .experience-item__content {
+  margin-left: var(--spacing-lg);
+  text-align: left;
+}
+
+.experience-item__icon {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 0 4px var(--color-bg-primary);
+  flex-shrink: 0;
+}
+
+.experience-item__content {
+  flex: 1;
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-lg);
+  transition: var(--transition-all);
+  max-width: 400px;
+}
+
+.experience-item__content:hover {
+  transform: translateY(-5px);
+  background: var(--color-bg-glass-hover);
+  box-shadow: var(--shadow-xl);
+}
+
+.experience-item__header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.experience-item__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-item__company {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-item__period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  background: rgba(59, 130, 246, 0.1);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.experience-item__description {
+  margin-bottom: var(--spacing-sm);
+}
+
+.experience-item__description p {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-sm);
+}
+
+.experience-item__achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item__achievements li {
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+}
+
+.experience-item__achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.experience-item__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.experience-item:nth-child(odd) .experience-item__skills {
+  justify-content: flex-end;
+}
+
+.experience-item:nth-child(even) .experience-item__skills {
+  justify-content: flex-start;
+}
+
+/* Mobile styles for experience timeline */
+@media (max-width: 768px) {
+  .experience__timeline::before {
+    left: 30px;
+  }
+  
+  .experience-item,
+  .experience-item:nth-child(even) {
+    flex-direction: row;
+    margin-left: 0;
+  }
+  
+  .experience-item__content,
+  .experience-item:nth-child(odd) .experience-item__content,
+  .experience-item:nth-child(even) .experience-item__content {
+    margin-left: var(--spacing-sm);
+    margin-right: 0;
+    text-align: left;
+    max-width: none;
+  }
+  
+  .experience-item__icon {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-size-lg);
+  }
+  
+  .experience-item__skills,
+  .experience-item:nth-child(odd) .experience-item__skills,
+  .experience-item:nth-child(even) .experience-item__skills {
+    justify-content: flex-start;
+  }
+}
+
 /* ==========================================================================
    LOADING STATES
    ========================================================================== */
