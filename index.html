@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio profesional de [Tu Nombre] - Desarrollador Full Stack especializado en aplicaciones web modernas y escalables">
+    <meta name="keywords" content="desarrollador, full stack, portfolio, react, javascript, web development, programador">
+    <meta name="author" content="Tu Nombre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tu Nombre - Desarrollador Full Stack | Portfolio">
+    <meta property="og:description" content="Portfolio profesional de desarrollador Full Stack especializado en tecnologías modernas">
+    <meta property="og:image" content="./src/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://tu-dominio.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio Profesional">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tu Nombre - Desarrollador Full Stack">
+    <meta name="twitter:description" content="Portfolio profesional de desarrollador Full Stack">
+    <meta name="twitter:image" content="./src/assets/images/twitter-card.jpg">
+    <meta name="twitter:creator" content="@tu_twitter">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./src/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/icons/favicon-16x16.png">
+    
+    <!-- Title -->
+    <title>Elvis Donayre- Data Scientist | Portfolio Profesional</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- CSS Styles (en orden de importancia) -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/variables.css">
+    <link rel="stylesheet" href="./src/css/utilities.css">
+    <link rel="stylesheet" href="./src/css/components.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#374151">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tu Nombre",
+        "jobTitle": "Data Scientist",
+        "description": "Desarrollador Full Stack especializado en aplicaciones web modernas",
+        "url": "https://tu-dominio.com",
+        "sameAs": [
+            "https://linkedin.com/in/tu-perfil",
+            "https://github.com/tu-usuario",
+            "https://twitter.com/tu_twitter"
+        ],
+        "knowsAbout": [
+            "JavaScript",
+            "React",
+            "Node.js",
+            "Python",
+            "Web Development",
+            "Full Stack Development"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to main content for screen readers -->
+    <a href="#main-content" class="visually-hidden">Saltar al contenido principal</a>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" role="progressbar" aria-label="Progreso de lectura de la página">
+        <div class="scroll-indicator__progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="background" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container" role="navigation" aria-label="Navegación principal">
+            <a href="#home" class="navbar__logo" aria-label="Ir al inicio">ELVIS DONAYRE</a>
+            
+            <ul class="navbar__menu" role="menubar">
+                <li role="none">
+                    <a href="#home" class="navbar__link" role="menuitem">Inicio</a>
+                </li>
+                <li role="none">
+                    <a href="#about" class="navbar__link" role="menuitem">Sobre Mí</a>
+                </li>
+                <li role="none">
+                    <a href="#projects" class="navbar__link" role="menuitem">Proyectos</a>
+                </li>
+                <li role="none">
+                    <a href="#contact" class="navbar__link" role="menuitem">Contacto</a>
+                </li>
+            </ul>
+            
+            <button class="navbar__toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="section section--hero" id="home" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__subtitle">👋 Hola, soy</div>
+                    <h1 class="hero__title" id="hero-title">Elvis Donayre</h1>
+                    <p class="hero__description">
+                        Data Scientist apasionado por crear experiencias digitales excepcionales. 
+                        Transformo ideas en código y código en soluciones innovadoras que impactan positivamente 
+                        en la vida de las personas.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contact" class="btn btn--secondary">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero__profile" aria-hidden="true">
+                    <div class="profile-card">
+                        <div class="profile-card__avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-card__title">Data Scientist</div>
+                        <div class="profile-card__subtitle">Machine Learning</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section section--alt" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 class="section__title" id="about-title">Sobre Mí</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>
+                            Soy un desarrollador apasionado con más de [X] años de experiencia creando 
+                            aplicaciones web modernas y escalables. Me especializo en tecnologías 
+                            frontend y backend, siempre buscando las mejores prácticas y las últimas 
+                            tendencias en desarrollo.
+                        </p>
+                        <p>
+                            Mi enfoque se centra en escribir código limpio, crear interfaces intuitivas 
+                            y construir productos que realmente importen. Disfruto colaborar en equipos 
+                            multidisciplinarios y enfrentar desafíos técnicos complejos que me permitan 
+                            crecer profesionalmente.
+                        </p>
+                        <p>
+                            Cuando no estoy programando, me gusta [tus hobbies], contribuir a proyectos 
+                            de código abierto y mantenerme actualizado con las últimas tecnologías del 
+                            ecosistema web.
+                        </p>
+                    </div>
+                    
+                    <div class="skills" role="list" aria-label="Habilidades técnicas">
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-js-square" aria-hidden="true"></i></div>
+                            <div class="skill__name">JavaScript</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-react" aria-hidden="true"></i></div>
+                            <div class="skill__name">React</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-node-js" aria-hidden="true"></i></div>
+                            <div class="skill__name">Node.js</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-python" aria-hidden="true"></i></div>
+                            <div class="skill__name">Python</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fas fa-database" aria-hidden="true"></i></div>
+                            <div class="skill__name">MongoDB</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-aws" aria-hidden="true"></i></div>
+                            <div class="skill__name">AWS</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-docker" aria-hidden="true"></i></div>
+                            <div class="skill__name">Docker</div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__icon"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
+                            <div class="skill__name">Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 class="section__title" id="projects-title">Mis Proyectos</h2>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">E-Commerce Platform</h3>
+                            <p class="project-card__description">
+                                Plataforma de comercio electrónico completa con carrito de compras, 
+                                sistema de pagos integrado, panel de administración y gestión de inventario. 
+                                Construida con tecnologías modernas y escalables.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">React</span>
+                                <span class="tag" role="listitem">Node.js</span>
+                                <span class="tag" role="listitem">MongoDB</span>
+                                <span class="tag" role="listitem">Stripe</span>
+                                <span class="tag" role="listitem">AWS</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del proyecto E-Commerce">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Dashboard Analytics</h3>
+                            <p class="project-card__description">
+                                Dashboard interactivo para visualización de datos con gráficos en tiempo real, 
+                                métricas de rendimiento y reportes personalizables. Incluye autenticación 
+                                y roles de usuario.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">Vue.js</span>
+                                <span class="tag" role="listitem">D3.js</span>
+                                <span class="tag" role="listitem">Python</span>
+                                <span class="tag" role="listitem">FastAPI</span>
+                                <span class="tag" role="listitem">PostgreSQL</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del Dashboard Analytics">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">App Móvil Fitness</h3>
+                            <p class="project-card__description">
+                                Aplicación móvil para seguimiento de ejercicios con rutinas personalizadas, 
+                                seguimiento de progreso, integración con wearables y comunidad social 
+                                para motivación mutua.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">React Native</span>
+                                <span class="tag" role="listitem">Firebase</span>
+                                <span class="tag" role="listitem">Redux</span>
+                                <span class="tag" role="listitem">Expo</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo de la App Móvil Fitness">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">AI Chat Assistant</h3>
+                            <p class="project-card__description">
+                                Asistente de chat inteligente con procesamiento de lenguaje natural, 
+                                integración con APIs de IA, historial de conversaciones y 
+                                personalización de respuestas.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">Next.js</span>
+                                <span class="tag" role="listitem">OpenAI</span>
+                                <span class="tag" role="listitem">TypeScript</span>
+                                <span class="tag" role="listitem">Prisma</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del AI Chat Assistant">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Task Management System</h3>
+                            <p class="project-card__description">
+                                Sistema de gestión de tareas colaborativo con tableros Kanban, 
+                                seguimiento de tiempo, notificaciones en tiempo real y 
+                                reportes de productividad.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">Angular</span>
+                                <span class="tag" role="listitem">NestJS</span>
+                                <span class="tag" role="listitem">Socket.io</span>
+                                <span class="tag" role="listitem">Redis</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del Task Management System">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image" aria-hidden="true">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Blog Platform CMS</h3>
+                            <p class="project-card__description">
+                                Plataforma de blogging con CMS personalizado, editor de contenido avanzado, 
+                                SEO optimizado, comentarios, búsqueda y sistema de suscripciones.
+                            </p>
+                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                <span class="tag" role="listitem">Astro</span>
+                                <span class="tag" role="listitem">Markdown</span>
+                                <span class="tag" role="listitem">Sanity</span>
+                                <span class="tag" role="listitem">Vercel</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del Blog Platform CMS">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                </a>
+                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 class="section__title" id="contact-title">Contacto</h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <p class="contact__intro">
+                            ¿Tienes un proyecto en mente? ¿Quieres colaborar en algo increíble? 
+                            ¡Me encantaría escuchar sobre tu idea y explorar cómo podemos hacerla realidad juntos!
+                        </p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>tu.email@ejemplo.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>Tu Ciudad, Tu País</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Disponibilidad</h3>
+                                <p>Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input"
+                                placeholder="Tu nombre completo" 
+                                required 
+                                aria-describedby="name-error"
+                            >
+                            <div id="name-error" class="form-error visually-hidden" role="alert"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                placeholder="tu@email.com" 
+                                required 
+                                aria-describedby="email-error"
+                            >
+                            <div id="email-error" class="form-error visually-hidden" role="alert"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input"
+                                placeholder="Asunto del mensaje"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea"
+                                rows="5" 
+                                placeholder="Cuéntame sobre tu proyecto..." 
+                                required 
+                                aria-describedby="message-error"
+                            ></textarea>
+                            <div id="message-error" class="form-error visually-hidden" role="alert"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="social-links" aria-label="Enlaces de redes sociales">
+                <a href="https://github.com/tu-usuario" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/tu-perfil" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/tu_twitter" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/tu_instagram" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:tu.email@ejemplo.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </nav>
+            <p class="footer__text">
+                &copy; 2025 Elvis Donayre. Hecho con ❤️ y mucho código. 
+                <br>
+                <small>Portfolio desarrollado con tecnologías web modernas y mejores prácticas.</small>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="./src/js/main.js"></script>
+    
+    <!-- Analytics (Opcional - reemplaza con tu código) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,312 @@
+/**
+ * Responsive Design
+ * Mobile-first responsive breakpoints
+ */
+
+/* ==========================================================================
+   TABLET (768px and up)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero__profile {
+    display: none;
+  }
+  
+  .about__content,
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+/* ==========================================================================
+   MOBILE (768px and down)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-6xl: var(--font-size-4xl);
+    --font-size-5xl: var(--font-size-3xl);
+    --font-size-4xl: var(--font-size-2xl);
+  }
+  
+  .container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+  
+  /* Header */
+  .navbar__menu {
+    display: none;
+  }
+  
+  .navbar__toggle {
+    display: block;
+  }
+  
+  /* Hero */
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-base);
+  }
+  
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Projects */
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Skills */
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  /* Buttons */
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn--sm {
+    width: auto;
+  }
+  
+  /* Palette selector */
+  .palette-selector {
+    right: 10px;
+    padding: var(--spacing-1);
+  }
+  
+  .palette-option {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE (480px and down)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .about__text {
+    font-size: var(--font-size-base);
+  }
+  
+  .contact__intro {
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Cards */
+  .card {
+    padding: var(--spacing-md);
+  }
+  
+  .project-card__content {
+    padding: var(--spacing-sm);
+  }
+  
+  /* Contact */
+  .contact-item {
+    gap: var(--spacing-xs);
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Social links */
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Hide palette selector on very small screens */
+  .palette-selector {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   LARGE SCREENS (1280px and up)
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
+  }
+  
+  .hero__title {
+    font-size: 5rem;
+  }
+  
+  .section__title {
+    font-size: 4rem;
+  }
+  
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .skills {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ==========================================================================
+   EXTRA LARGE SCREENS (1536px and up)
+   ========================================================================== */
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero__title {
+    font-size: 6rem;
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ==========================================================================
+   LANDSCAPE ORIENTATION
+   ========================================================================== */
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .section--hero {
+    min-height: auto;
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero__profile {
+    position: static;
+    transform: none;
+    margin-top: var(--spacing-lg);
+  }
+  
+  .profile-card {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   HOVER STATES (only for devices that support hover)
+   ========================================================================== */
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill:hover {
+    transform: translateY(-3px);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .social-link:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ==========================================================================
+   HIGH RESOLUTION DISPLAYS
+   ========================================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimizations for retina displays */
+  .background {
+    background-attachment: fixed;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  .header,
+  .palette-selector,
+  .scroll-indicator,
+  .hero__actions,
+  .contact-form,
+  .social-links {
+    display: none !important;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+    page-break-inside: avoid;
+  }
+  
+  .project-card,
+  .skill {
+    break-inside: avoid;
+  }
+  
+  .hero__title,
+  .section__title {
+    color: #000 !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .about__text,
+  .hero__description,
+  .contact__intro {
+    color: #333 !important;
+  }

@@ -1,0 +1,247 @@
+/**
+ * CSS Custom Properties (Variables)
+ * Sistema de diseño modular y escalable
+ */
+
+:root {
+  /* ==========================================================================
+     PALETA DE COLORES - MINIMALISTA GRIS
+     ========================================================================== */
+  
+  /* Colores principales */
+  --color-primary: #374151;      /* Gris azulado */
+  --color-secondary: #3b82f6;    /* Azul clásico */
+  --color-accent: #10b981;       /* Verde menta */
+  --color-success: #10b981;      /* Verde éxito */
+  --color-warning: #f59e0b;      /* Amarillo advertencia */
+  --color-error: #ef4444;        /* Rojo error */
+  
+  /* Colores de texto */
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #1e293b;
+  
+  /* Colores de fondo */
+  --color-bg-primary: #111827;           /* Gris muy oscuro */
+  --color-bg-secondary: rgba(17, 24, 39, 0.5);
+  --color-bg-tertiary: #1f2937;
+  --color-bg-glass: rgba(248, 250, 252, 0.08);
+  --color-bg-glass-hover: rgba(248, 250, 252, 0.12);
+  
+  /* Colores de borde */
+  --color-border: rgba(248, 250, 252, 0.1);
+  --color-border-hover: rgba(248, 250, 252, 0.2);
+  --color-border-focus: var(--color-secondary);
+  
+  /* ==========================================================================
+     GRADIENTES
+     ========================================================================== */
+  
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-hero: linear-gradient(135deg, #374151 0%, #3b82f6 50%, #10b981 100%);
+  --gradient-text: linear-gradient(135deg, var(--color-text-primary), var(--color-secondary));
+  --gradient-card: linear-gradient(135deg, rgba(55, 65, 81, 0.1), rgba(59, 130, 246, 0.05));
+  
+  /* ==========================================================================
+     TIPOGRAFÍA
+     ========================================================================== */
+  
+  /* Familia de fuentes */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  
+  /* Tamaños de fuente */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 2rem;        /* 32px */
+  --font-size-4xl: 2.5rem;      /* 40px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 4rem;        /* 64px */
+  
+  /* Pesos de fuente */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* Altura de línea */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* ==========================================================================
+     ESPACIADO
+     ========================================================================== */
+  
+  --spacing-px: 1px;
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;         /* 4px */
+  --spacing-2: 0.5rem;          /* 8px */
+  --spacing-3: 0.75rem;         /* 12px */
+  --spacing-4: 1rem;            /* 16px */
+  --spacing-5: 1.25rem;         /* 20px */
+  --spacing-6: 1.5rem;          /* 24px */
+  --spacing-8: 2rem;            /* 32px */
+  --spacing-10: 2.5rem;         /* 40px */
+  --spacing-12: 3rem;           /* 48px */
+  --spacing-16: 4rem;           /* 64px */
+  --spacing-20: 5rem;           /* 80px */
+  --spacing-24: 6rem;           /* 96px */
+  --spacing-32: 8rem;           /* 128px */
+  
+  /* Alias semánticos */
+  --spacing-xs: var(--spacing-2);
+  --spacing-sm: var(--spacing-4);
+  --spacing-md: var(--spacing-6);
+  --spacing-lg: var(--spacing-8);
+  --spacing-xl: var(--spacing-12);
+  --spacing-2xl: var(--spacing-16);
+  --spacing-3xl: var(--spacing-24);
+  
+  /* ==========================================================================
+     SOMBRAS
+     ========================================================================== */
+  
+  --shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Sombras específicas */
+  --shadow-glow: 0 10px 30px rgba(55, 65, 81, 0.3);
+  --shadow-glow-hover: 0 15px 40px rgba(55, 65, 81, 0.4);
+  --shadow-card: var(--shadow-lg);
+  --shadow-dropdown: var(--shadow-xl);
+  
+  /* ==========================================================================
+     RADIO DE BORDE
+     ========================================================================== */
+  
+  --radius-none: 0;
+  --radius-sm: 0.125rem;         /* 2px */
+  --radius-md: 0.375rem;         /* 6px */
+  --radius-lg: 0.5rem;           /* 8px */
+  --radius-xl: 0.75rem;          /* 12px */
+  --radius-2xl: 1rem;            /* 16px */
+  --radius-3xl: 1.5rem;          /* 24px */
+  --radius-full: 9999px;
+  
+  /* ==========================================================================
+     TRANSICIONES
+     ========================================================================== */
+  
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Transiciones comunes */
+  --transition-fast: var(--duration-150) var(--ease-out);
+  --transition-normal: var(--duration-300) var(--ease-out);
+  --transition-slow: var(--duration-500) var(--ease-out);
+  --transition-all: all var(--transition-normal);
+  --transition-colors: color var(--transition-normal), background-color var(--transition-normal), border-color var(--transition-normal);
+  --transition-transform: transform var(--transition-normal);
+  
+  /* ==========================================================================
+     Z-INDEX
+     ========================================================================== */
+  
+  --z-index-auto: auto;
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  
+  /* Capas semánticas */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  
+  /* ==========================================================================
+     LAYOUT
+     ========================================================================== */
+  
+  --container-max-width: 1200px;
+  --header-height: 80px;
+  --sidebar-width: 280px;
+  
+  /* Breakpoints (para uso en JavaScript) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* ==========================================================================
+   DARK MODE SUPPORT
+   ========================================================================== */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: rgba(248, 250, 252, 0.8);
+  }
+}
+
+/* ==========================================================================
+   HIGH CONTRAST MODE
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-secondary: var(--color-text-primary);
+    --color-border: rgba(255, 255, 255, 0.5);
+    --color-bg-glass: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-75: 1ms;
+    --duration-100: 1ms;
+    --duration-150: 1ms;
+    --duration-200: 1ms;
+    --duration-300: 1ms;
+    --duration-500: 1ms;
+    --duration-700: 1ms;
+    --duration-1000: 1ms;
+  }
+}

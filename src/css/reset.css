@@ -1,0 +1,217 @@
+/**
+ * Modern CSS Reset
+ * Basado en las mejores prácticas de Josh Comeau y Andy Bell
+ */
+
+/* ==========================================================================
+   BOX SIZING
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   REMOVE DEFAULT MARGIN AND PADDING
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   HTML & BODY
+   ========================================================================== */
+
+html {
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+  
+  /* Font size base */
+  font-size: 16px;
+}
+
+body {
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  
+  /* Line height for better readability */
+  line-height: 1.5;
+  
+  /* Set font family */
+  font-family: var(--font-family-primary);
+  
+  /* Set base colors */
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+/* Improve heading typography */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: var(--line-height-tight);
+}
+
+/* Improve paragraph typography */
+p {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+/* ==========================================================================
+   MEDIA
+   ========================================================================== */
+
+/* Make images responsive */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+/* Remove list styles where appropriate */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Ensure buttons have a pointer cursor */
+button {
+  cursor: pointer;
+}
+
+/* Remove button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Improve link accessibility */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   FOCUS STYLES
+   ========================================================================== */
+
+/* Remove default focus outline and add custom one */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+
+/* Improve form element styling */
+input, textarea, select {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  img {
+    page-break-inside: avoid;
+  }
+  
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
