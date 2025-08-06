@@ -187,9 +187,19 @@
    HERO SECTION
    ========================================================================== */
 
-.hero__content {
-  max-width: 600px;
+
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-16);
+    align-items: center;
+    width: 100%;
 }
+
+.hero__content {
+    max-width: 600px;
+}
+
 
 .hero__subtitle {
   font-size: var(--font-size-xl);
