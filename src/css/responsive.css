@@ -99,6 +99,19 @@
     width: 35px;
     height: 35px;
   }
+
+  /* Social links en pantallas muy pequeñas */
+.social-links {
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap; /* Permitir wrap si es necesario */
+}
+
+.social-link {
+  width: 45px;
+  height: 45px;
+  font-size: var(--font-size-sm);
+}
 }
 
 /* ==========================================================================
@@ -316,3 +329,16 @@
   .contact__intro {
     color: #333 !important;
   }
+
+  /* Social links responsive */
+.social-links {
+  gap: var(--spacing-md); /* Reducir gap en mobile */
+  margin-top: var(--spacing-lg);
+  justify-content: center; /* Mantener centrado en mobile */
+}
+
+.social-link {
+  width: 50px; /* Ligeramente más pequeño en mobile */
+  height: 50px;
+  font-size: var(--font-size-base);
+}

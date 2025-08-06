@@ -233,8 +233,15 @@
 .hero__actions {
   display: flex;
   gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md); /* Añadir margin bottom */
   opacity: 0;
   animation: fadeInUp 1s ease 0.8s forwards;
+}
+
+/* Asegurar que los social links tengan su propia animación */
+.social-links {
+  opacity: 0;
+  animation: fadeInUp 1s ease 1s forwards; /* Aparecen después de los botones */
 }
 
 .hero__profile {

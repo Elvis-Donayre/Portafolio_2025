@@ -22,6 +22,7 @@
   transition: var(--transition-all);
 }
 
+
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
@@ -275,13 +276,17 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-lg); /* Aumentado de sm a lg (32px) */
+  margin-top: var(--spacing-xl); /* Separación de los botones de acción */
+  padding: var(--spacing-md) 0; /* Padding vertical adicional */
 }
 
 .social-link {
-  width: 50px;
-  height: 50px;
+  width: 55px; /* Ligeramente más grande */
+  height: 55px;
   background: var(--color-bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -290,12 +295,53 @@
   text-decoration: none;
   transition: var(--transition-all);
   font-size: var(--font-size-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.social-link:hover::before,
+.social-link:focus::before {
+  opacity: 1;
+}
+
+.social-link i {
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-transform);
 }
 
 .social-link:hover,
 .social-link:focus {
-  background: var(--gradient-primary);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--color-secondary);
+}
+
+.social-link:hover i,
+.social-link:focus i {
+  transform: scale(1.1);
+}
+
+/* Efectos específicos por tipo de enlace */
+.social-link[href*="github"]:hover {
+  background: linear-gradient(135deg, #333, #666);
+}
+
+.social-link[href*="linkedin"]:hover {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+
+.social-link[href*="mailto"]:hover {
+  background: linear-gradient(135deg, #ea4335, #fbbc04);
 }
 
 /* ==========================================================================
@@ -862,4 +908,123 @@
   color: var(--color-text-primary);
   font-family: inherit;
   font-size: var(--font-size-base);
-  transition: var(--transition-all
+  transition: var(--transition-all)
+
+/* ==========================================================================
+   CERTIFICATIONS
+   ========================================================================== */
+
+.certifications {
+  margin-top: var(--spacing-2xl);
+}
+
+.certifications__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.certifications__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  justify-items: center;
+}
+
+.certification-badge {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-lg);
+  transition: var(--transition-all);
+  max-width: 350px;
+  width: 100%;
+}
+
+.certification-badge:hover {
+  transform: translateY(-8px);
+  background: var(--color-bg-glass-hover);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-secondary);
+}
+
+.certification-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.certification-badge__image {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.certification-badge__image img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  background: white;
+  padding: var(--spacing-xs);
+  box-shadow: var(--shadow-sm);
+}
+
+.certification-badge__content {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.certification-badge__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.certification-badge__issuer {
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+}
+
+.certification-badge__date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.certification-badge__verify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  opacity: 0;
+  transition: var(--transition-all);
+}
+
+.certification-badge:hover .certification-badge__verify {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .certifications__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-badge {
+    max-width: 100%;
+  }
+  
+  .certification-badge__image img {
+    width: 100px;
+    height: 100px;
+  }
+}
