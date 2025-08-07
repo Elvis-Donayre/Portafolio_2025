@@ -45,7 +45,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <!-- CSS Styles (en orden de importancia) -->
+    <!-- CSS Styles (manteniendo tu estructura modular) -->
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/variables.css">
     <link rel="stylesheet" href="./src/css/utilities.css">
@@ -128,27 +128,12 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Hero Section - Bento Grid -->
         <section class="section section--hero" id="home" aria-labelledby="hero-title">
             <div class="container">
-                <div class="hero__container">
-                    <!-- Profile Image Section -->
-                    <div class="hero__profile">
-                        <div class="profile-image">
-                            <div class="profile-image__wrapper">
-                                <img src="./src/assets/images/foto_perfil.jpg" alt="Elvis Donayre - Data Scientist" loading="eager" width="400" height="400">
-                                <div class="profile-image__overlay">
-                                    <div class="profile-badge">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>Data Scientist</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Section -->
-                    <div class="hero__content">
+                <div class="bento-grid">
+                    <!-- Hero Principal -->
+                    <div class="bento-item bento-hero">
                         <div class="hero__intro">
                             <span class="hero__greeting">👋 Hola, soy</span>
                             <h1 class="hero__name" id="hero-title">Elvis Donayre</h1>
@@ -160,21 +145,6 @@
                             decisiones estratégicas. Especializado en machine learning, análisis predictivo y 
                             visualización de datos para generar <span class="highlight">impacto real</span> en los negocios.
                         </p>
-
-                        <div class="hero__stats">
-                            <div class="stat-item">
-                                <div class="stat-number">3+</div>
-                                <div class="stat-label">Años de Experiencia</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-label">Proyectos Completados</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">25%</div>
-                                <div class="stat-label">Mejora en Eficiencia</div>
-                            </div>
-                        </div>
 
                         <div class="hero__actions">
                             <a href="#projects" class="btn btn--primary btn--large">
@@ -200,228 +170,286 @@
                             </a>
                         </nav>
                     </div>
-                </div>
 
-                <!-- Scroll Indicator -->
-                <div class="scroll-indicator-hero">
-                    <div class="scroll-mouse">
-                        <div class="scroll-wheel"></div>
-                    </div>
-                    <span>Scroll para explorar</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="section section--alt" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <h2 class="section__title" id="about-title">Sobre Mí</h2>
-                <div class="about__content">
-                    <div class="about__text">
-                        <p>
-                            Soy un Data Scientist apasionado con amplia experiencia en el análisis de datos 
-                            y machine learning. Me especializo en transformar datos complejos en insights 
-                            accionables que impulsan la toma de decisiones estratégicas en organizaciones.
-                        </p>
-                        <p>
-                            Mi experiencia en SUNAT me ha permitido desarrollar modelos de machine learning 
-                            que optimizan procesos gubernamentales críticos, mejorando la eficiencia operativa 
-                            y generando ahorros significativos para la institución.
-                        </p>
-                        <p>
-                            Cuando no estoy analizando datos, disfruto explorando nuevas tecnologías de IA, 
-                            contribuyendo a proyectos de código abierto y manteniéndome actualizado con las 
-                            últimas tendencias en ciencia de datos y machine learning.
-                        </p>
-                    </div>
-                    
-                    <div class="skills" role="list" aria-label="Habilidades técnicas">
-                        <!-- Lenguajes de programación -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-python" aria-hidden="true"></i></div>
-                            <div class="skill__name">Python</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-r-project" aria-hidden="true"></i></div>
-                            <div class="skill__name">R</div>
-                        </div>
-                        
-                        <!-- Machine Learning -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-                            <div class="skill__name">TensorFlow</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
-                            <div class="skill__name">Scikit-learn</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
-                            <div class="skill__name">PyTorch</div>
-                        </div>
-                        
-                        <!-- Análisis de datos -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-table" aria-hidden="true"></i></div>
-                            <div class="skill__name">Pandas</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
-                            <div class="skill__name">NumPy</div>
-                        </div>
-                        
-                        <!-- Visualización -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
-                            <div class="skill__name">Matplotlib</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
-                            <div class="skill__name">Seaborn</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-chart-area" aria-hidden="true"></i></div>
-                            <div class="skill__name">Plotly</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
-                            <div class="skill__name">Power BI</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-chart-column" aria-hidden="true"></i></div>
-                            <div class="skill__name">Tableau</div>
-                        </div>
-                        
-                        <!-- Bases de datos -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-database" aria-hidden="true"></i></div>
-                            <div class="skill__name">SQL</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
-                            <div class="skill__name">NoSQL</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-google" aria-hidden="true"></i></div>
-                            <div class="skill__name">BigQuery</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
-                            <div class="skill__name">Firebase</div>
-                        </div>
-                        
-                        <!-- Herramientas -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-book" aria-hidden="true"></i></div>
-                            <div class="skill__name">Jupyter</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
-                            <div class="skill__name">Streamlit</div>
-                        </div>
-                        
-                        <!-- Cloud y DevOps -->
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-aws" aria-hidden="true"></i></div>
-                            <div class="skill__name">AWS</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-google" aria-hidden="true"></i></div>
-                            <div class="skill__name">Google Cloud</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-docker" aria-hidden="true"></i></div>
-                            <div class="skill__name">Docker</div>
-                        </div>
-                        <div class="skill" role="listitem">
-                            <div class="skill__icon"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
-                            <div class="skill__name">Git</div>
+                    <!-- Imagen de Perfil -->
+                    <div class="bento-item bento-profile">
+                        <div class="bento-profile-image">
+                            <img src="./src/assets/images/foto_perfil.jpg" alt="Elvis Donayre - Data Scientist" loading="eager" width="150" height="150">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section class="section" id="experience" aria-labelledby="experience-title">
-            <div class="container">
-                <h2 class="section__title" id="experience-title">Experiencia Profesional</h2>
-                <div class="experience__timeline">
-                    <article class="experience-item">
-                        <div class="experience-item__icon">
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <!-- Estadísticas -->
+                    <div class="bento-item bento-stats">
+                        <div class="bento-stat-item">
+                            <div class="bento-stat-number">3+</div>
+                            <div class="bento-stat-label">Años de Experiencia</div>
                         </div>
-                        <div class="experience-item__content">
-                            <div class="experience-item__header">
-                                <h3 class="experience-item__title">Verificador Auxiliar de Cobranza con funciones de Senior Data Analyst</h3>
-                                <div class="experience-item__company">
-                                    <a href="https://www.sunat.gob.pe/" target="_blank" rel="noopener noreferrer">
-                                        SUNAT - Superintendencia Nacional de Aduanas y de Administración Tributaria
-                                    </a>
-                                </div>
-                                <div class="experience-item__period">Enero 2022 - Presente</div>
-                            </div>
-                            <div class="experience-item__description">
-                                <p>
-                                    Lidero iniciativas de ciencia de datos desarrollando modelos de machine learning para 
-                                    optimización de procesos tributarios. Implementé sistemas de análisis predictivo que 
-                                    mejoraron significativamente la eficiencia en procesos de cobranza y detección de 
-                                    patrones fiscales.
-                                </p>
-                                <ul class="experience-item__achievements">
-                                    <li>Desarrollé modelos predictivos que incrementaron la eficiencia de cobranza en un 25%</li>
-                                    <li>Implementé dashboards interactivos que optimizaron la toma de decisiones gerenciales</li>
-                                    <li>Automaticé procesos de análisis de datos, reduciendo tiempos de procesamiento en un 60%</li>
-                                </ul>
-                            </div>
-                            <div class="experience-item__skills">
-                                <span class="tag">Python</span>
-                                <span class="tag">R</span>
-                                <span class="tag">Power BI</span>
-                                <span class="tag">SQL</span>
-                                <span class="tag">Machine Learning</span>
-                            </div>
+                        <div class="bento-stat-item">
+                            <div class="bento-stat-number">15+</div>
+                            <div class="bento-stat-label">Proyectos Completados</div>
                         </div>
-                    </article>
-                </div> 
-            </div> 
-        </section>
+                        <div class="bento-stat-item">
+                            <div class="bento-stat-number">25%</div>
+                            <div class="bento-stat-label">Mejora en Eficiencia</div>
+                        </div>
+                    </div>
 
-        <!-- Certifications Section -->
-        <section class="section section--alt" id="certifications" aria-labelledby="certifications-title">
-            <div class="container">
-                <h2 class="section__title" id="certifications-title">Certificaciones</h2>
-                <div class="certifications__grid">
-                    <div class="certification-badge">
+                    <!-- Sobre Mí -->
+                    <div class="bento-item bento-about" id="about">
+                        <h3 class="bento-title" style="font-size: var(--font-size-2xl);">Sobre Mí</h3>
+                        <div class="about__text">
+                            <p>
+                                Soy un Data Scientist apasionado con amplia experiencia en el análisis de datos 
+                                y machine learning. Me especializo en transformar datos complejos en insights 
+                                accionables que impulsan la toma de decisiones estratégicas en organizaciones.
+                            </p>
+                            <p>
+                                Mi experiencia en SUNAT me ha permitido desarrollar modelos de machine learning 
+                                que optimizan procesos gubernamentales críticos, mejorando la eficiencia operativa 
+                                y generando ahorros significativos para la institución.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia -->
+                    <div class="bento-item bento-experience" id="experience">
+                        <h3 class="bento-title" style="font-size: var(--font-size-xl);">Experiencia</h3>
+                        <div class="list-item">
+                            <div class="list-title">Senior Data Analyst</div>
+                            <div class="list-subtitle">SUNAT</div>
+                            <div class="list-date">2022 - Presente</div>
+                        </div>
+                        <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm); margin-top: var(--spacing-sm);">
+                            Desarrollo de modelos predictivos que incrementaron la eficiencia de cobranza en un 25%.
+                            Implementación de dashboards interactivos y automatización de procesos.
+                        </p>
+                    </div>
+
+                    <!-- Certificaciones -->
+                    <div class="bento-item bento-certifications" id="certifications">
+                        <h3 class="bento-title" style="font-size: var(--font-size-xl);">Certificaciones</h3>
+                        <div style="text-align: center;">
+                            <img src="https://images.credly.com/size/340x340/images/015364a4-c68c-4c42-8060-3553118f2ff0/image.png" 
+                                 alt="Google Data Analytics Certificate" 
+                                 style="width: 80px; height: 80px; border-radius: var(--radius-md); margin-bottom: var(--spacing-sm);">
+                            <div class="list-title" style="font-size: var(--font-size-sm);">Google Data Analytics</div>
+                            <div class="list-date">2024</div>
+                        </div>
                         <a href="https://www.credly.com/badges/87d8d157-cfa5-4d0a-a594-e7834da6470b" 
                            target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="certification-link"
-                           aria-label="Ver certificación de Google Data Analytics en Credly">
-                            <div class="certification-badge__image">
-                                <img src="https://images.credly.com/size/340x340/images/015364a4-c68c-4c42-8060-3553118f2ff0/image.png" 
-                                     alt="Google Data Analytics Certificate" 
-                                     loading="lazy"
-                                     width="120"
-                                     height="120"
-                                     decoding="async">
-                            </div>
-                            <div class="certification-badge__content">
-                                <h3 class="certification-badge__title">Google Data Analytics Certificate</h3>
-                                <p class="certification-badge__issuer">Google</p>
-                                <p class="certification-badge__date">2024</p>
-                                <p class="certification-badge__description">
-                                    Certificación completa en análisis de datos, incluyendo limpieza, 
-                                    análisis y visualización de datos utilizando herramientas como 
-                                    R, SQL, Tableau y Google Sheets.
-                                </p>
-                            </div>
-                            <div class="certification-badge__verify">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                <span>Verificar credencial</span>
-                            </div>
+                           rel="noopener noreferrer"
+                           style="color: var(--color-secondary); text-decoration: none; font-size: var(--font-size-xs); margin-top: var(--spacing-sm); display: block; text-align: center;">
+                            <i class="fas fa-external-link-alt"></i> Ver Credencial
                         </a>
                     </div>
+
+                    <!-- Contacto -->
+                    <div class="bento-item bento-contact" id="contact">
+                        <h3 class="bento-title" style="font-size: var(--font-size-xl);">Contacto</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">ejoel.donayrep@gmail.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">Pucallpa, Ucayali, Perú</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">Lun-Vie 9:00-18:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Slider -->
+        <section class="skills-slider" aria-label="Mis habilidades técnicas">
+            <div class="skills-track">
+                <!-- Primera iteración de skills -->
+                <div class="skill-item skill-python">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-item skill-r">
+                    <div class="skill-icon"><i class="fab fa-r-project"></i></div>
+                    <div class="skill-name">R</div>
+                </div>
+                <div class="skill-item skill-tensorflow">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <div class="skill-name">TensorFlow</div>
+                </div>
+                <div class="skill-item skill-scikit">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <div class="skill-name">Scikit-learn</div>
+                </div>
+                <div class="skill-item skill-pytorch">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <div class="skill-name">PyTorch</div>
+                </div>
+                <div class="skill-item skill-pandas">
+                    <div class="skill-icon"><i class="fas fa-table"></i></div>
+                    <div class="skill-name">Pandas</div>
+                </div>
+                <div class="skill-item skill-numpy">
+                    <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="skill-name">NumPy</div>
+                </div>
+                <div class="skill-item skill-matplotlib">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="skill-name">Matplotlib</div>
+                </div>
+                <div class="skill-item skill-seaborn">
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="skill-name">Seaborn</div>
+                </div>
+                <div class="skill-item skill-plotly">
+                    <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
+                    <div class="skill-name">Plotly</div>
+                </div>
+                <div class="skill-item skill-powerbi">
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="skill-name">Power BI</div>
+                </div>
+                <div class="skill-item skill-tableau">
+                    <div class="skill-icon"><i class="fas fa-chart-column"></i></div>
+                    <div class="skill-name">Tableau</div>
+                </div>
+                <div class="skill-item skill-sql">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <div class="skill-name">SQL</div>
+                </div>
+                <div class="skill-item skill-nosql">
+                    <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="skill-name">NoSQL</div>
+                </div>
+                <div class="skill-item skill-bigquery">
+                    <div class="skill-icon"><i class="fab fa-google"></i></div>
+                    <div class="skill-name">BigQuery</div>
+                </div>
+                <div class="skill-item skill-firebase">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <div class="skill-name">Firebase</div>
+                </div>
+                <div class="skill-item skill-jupyter">
+                    <div class="skill-icon"><i class="fas fa-book"></i></div>
+                    <div class="skill-name">Jupyter</div>
+                </div>
+                <div class="skill-item skill-streamlit">
+                    <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="skill-name">Streamlit</div>
+                </div>
+                <div class="skill-item skill-aws">
+                    <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                    <div class="skill-name">AWS</div>
+                </div>
+                <div class="skill-item skill-gcp">
+                    <div class="skill-icon"><i class="fab fa-google"></i></div>
+                    <div class="skill-name">Google Cloud</div>
+                </div>
+                <div class="skill-item skill-docker">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-item skill-git">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-name">Git</div>
+                </div>
+
+                <!-- Segunda iteración para el loop infinito -->
+                <div class="skill-item skill-python">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-item skill-r">
+                    <div class="skill-icon"><i class="fab fa-r-project"></i></div>
+                    <div class="skill-name">R</div>
+                </div>
+                <div class="skill-item skill-tensorflow">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <div class="skill-name">TensorFlow</div>
+                </div>
+                <div class="skill-item skill-scikit">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <div class="skill-name">Scikit-learn</div>
+                </div>
+                <div class="skill-item skill-pytorch">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <div class="skill-name">PyTorch</div>
+                </div>
+                <div class="skill-item skill-pandas">
+                    <div class="skill-icon"><i class="fas fa-table"></i></div>
+                    <div class="skill-name">Pandas</div>
+                </div>
+                <div class="skill-item skill-numpy">
+                    <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="skill-name">NumPy</div>
+                </div>
+                <div class="skill-item skill-matplotlib">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="skill-name">Matplotlib</div>
+                </div>
+                <div class="skill-item skill-seaborn">
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="skill-name">Seaborn</div>
+                </div>
+                <div class="skill-item skill-plotly">
+                    <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
+                    <div class="skill-name">Plotly</div>
+                </div>
+                <div class="skill-item skill-powerbi">
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="skill-name">Power BI</div>
+                </div>
+                <div class="skill-item skill-tableau">
+                    <div class="skill-icon"><i class="fas fa-chart-column"></i></div>
+                    <div class="skill-name">Tableau</div>
+                </div>
+                <div class="skill-item skill-sql">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <div class="skill-name">SQL</div>
+                </div>
+                <div class="skill-item skill-nosql">
+                    <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="skill-name">NoSQL</div>
+                </div>
+                <div class="skill-item skill-bigquery">
+                    <div class="skill-icon"><i class="fab fa-google"></i></div>
+                    <div class="skill-name">BigQuery</div>
+                </div>
+                <div class="skill-item skill-firebase">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <div class="skill-name">Firebase</div>
+                </div>
+                <div class="skill-item skill-jupyter">
+                    <div class="skill-icon"><i class="fas fa-book"></i></div>
+                    <div class="skill-name">Jupyter</div>
+                </div>
+                <div class="skill-item skill-streamlit">
+                    <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="skill-name">Streamlit</div>
+                </div>
+                <div class="skill-item skill-aws">
+                    <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                    <div class="skill-name">AWS</div>
+                </div>
+                <div class="skill-item skill-gcp">
+                    <div class="skill-icon"><i class="fab fa-google"></i></div>
+                    <div class="skill-name">Google Cloud</div>
+                </div>
+                <div class="skill-item skill-docker">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-item skill-git">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-name">Git</div>
                 </div>
             </div>
         </section>
@@ -432,126 +460,106 @@
                 <h2 class="section__title" id="projects-title">Mis Proyectos</h2>
                 <div class="projects__grid">
                     <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-chart-line"></i>
+                        <h3 class="project-card__title">Sistema Predictivo de Cobranza</h3>
+                        <p class="project-card__description">
+                            Modelo de machine learning que predice la probabilidad de cobro exitoso 
+                            utilizando datos históricos y variables socioeconómicas. Implementado 
+                            en producción para optimizar estrategias de cobranza.
+                        </p>
+                        <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                            <span class="tag" role="listitem">Python</span>
+                            <span class="tag" role="listitem">Scikit-learn</span>
+                            <span class="tag" role="listitem">Pandas</span>
+                            <span class="tag" role="listitem">PostgreSQL</span>
+                            <span class="tag" role="listitem">Streamlit</span>
                         </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Sistema Predictivo de Cobranza</h3>
-                            <p class="project-card__description">
-                                Modelo de machine learning que predice la probabilidad de cobro exitoso 
-                                utilizando datos históricos y variables socioeconómicas. Implementado 
-                                en producción para optimizar estrategias de cobranza.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Python</span>
-                                <span class="tag" role="listitem">Scikit-learn</span>
-                                <span class="tag" role="listitem">Pandas</span>
-                                <span class="tag" role="listitem">PostgreSQL</span>
-                                <span class="tag" role="listitem">Streamlit</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del proyecto">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                                </a>
-                            </div>
+                        <div class="project-card__links">
+                            <a href="#" class="project-card__link" aria-label="Ver demo del proyecto">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                            </a>
+                            <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-chart-bar"></i>
+                        <h3 class="project-card__title">Dashboard Ejecutivo de KPIs</h3>
+                        <p class="project-card__description">
+                            Dashboard interactivo en Power BI que centraliza métricas clave de 
+                            rendimiento organizacional, con capacidades de drill-down y 
+                            alertas automatizadas para la toma de decisiones ejecutivas.
+                        </p>
+                        <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                            <span class="tag" role="listitem">Power BI</span>
+                            <span class="tag" role="listitem">SQL</span>
+                            <span class="tag" role="listitem">DAX</span>
+                            <span class="tag" role="listitem">Azure</span>
+                            <span class="tag" role="listitem">Python</span>
                         </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Dashboard Ejecutivo de KPIs</h3>
-                            <p class="project-card__description">
-                                Dashboard interactivo en Power BI que centraliza métricas clave de 
-                                rendimiento organizacional, con capacidades de drill-down y 
-                                alertas automatizadas para la toma de decisiones ejecutivas.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Power BI</span>
-                                <span class="tag" role="listitem">SQL</span>
-                                <span class="tag" role="listitem">DAX</span>
-                                <span class="tag" role="listitem">Azure</span>
-                                <span class="tag" role="listitem">Python</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del Dashboard">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver documentación">
-                                    <i class="fas fa-file-alt" aria-hidden="true"></i> Docs
-                                </a>
-                            </div>
+                        <div class="project-card__links">
+                            <a href="#" class="project-card__link" aria-label="Ver demo del Dashboard">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                            </a>
+                            <a href="#" class="project-card__link" aria-label="Ver documentación">
+                                <i class="fas fa-file-alt" aria-hidden="true"></i> Docs
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-brain"></i>
+                        <h3 class="project-card__title">Análisis de Segmentación de Contribuyentes</h3>
+                        <p class="project-card__description">
+                            Análisis avanzado de clustering para segmentar contribuyentes basado 
+                            en patrones de comportamiento fiscal, permitiendo estrategias 
+                            diferenciadas de atención y control.
+                        </p>
+                        <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                            <span class="tag" role="listitem">Python</span>
+                            <span class="tag" role="listitem">K-Means</span>
+                            <span class="tag" role="listitem">Plotly</span>
+                            <span class="tag" role="listitem">Jupyter</span>
                         </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Análisis de Segmentación de Contribuyentes</h3>
-                            <p class="project-card__description">
-                                Análisis avanzado de clustering para segmentar contribuyentes basado 
-                                en patrones de comportamiento fiscal, permitiendo estrategias 
-                                diferenciadas de atención y control.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Python</span>
-                                <span class="tag" role="listitem">K-Means</span>
-                                <span class="tag" role="listitem">Plotly</span>
-                                <span class="tag" role="listitem">Jupyter</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver análisis completo">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Análisis
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                                </a>
-                            </div>
+                        <div class="project-card__links">
+                            <a href="#" class="project-card__link" aria-label="Ver análisis completo">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Análisis
+                            </a>
+                            <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-robot"></i>
+                        <h3 class="project-card__title">Automatización de Reportes con IA</h3>
+                        <p class="project-card__description">
+                            Sistema automatizado que genera reportes inteligentes utilizando 
+                            procesamiento de lenguaje natural para crear resúmenes ejecutivos 
+                            de datos complejos de manera automática.
+                        </p>
+                        <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                            <span class="tag" role="listitem">Python</span>
+                            <span class="tag" role="listitem">NLP</span>
+                            <span class="tag" role="listitem">OpenAI API</span>
+                            <span class="tag" role="listitem">Flask</span>
                         </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Automatización de Reportes con IA</h3>
-                            <p class="project-card__description">
-                                Sistema automatizado que genera reportes inteligentes utilizando 
-                                procesamiento de lenguaje natural para crear resúmenes ejecutivos 
-                                de datos complejos de manera automática.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Python</span>
-                                <span class="tag" role="listitem">NLP</span>
-                                <span class="tag" role="listitem">OpenAI API</span>
-                                <span class="tag" role="listitem">Flask</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del sistema">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                                </a>
-                            </div>
+                        <div class="project-card__links">
+                            <a href="#" class="project-card__link" aria-label="Ver demo del sistema">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                            </a>
+                            <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                            </a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+        <!-- Contact Form Section -->
+        <section class="section section--alt" id="contact-form" aria-labelledby="contact-form-title">
             <div class="container">
-                <h2 class="section__title" id="contact-title">Contacto</h2>
+                <h2 class="section__title" id="contact-form-title">¿Tienes un proyecto en mente?</h2>
                 <div class="contact__content">
                     <div class="contact__info">
                         <p class="contact__intro">
@@ -676,7 +684,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Modules -->
+    <!-- JavaScript Modules (manteniendo tu estructura modular) -->
     <script type="module" src="./src/js/main.js"></script>
     
     <!-- Analytics (Opcional - reemplaza con tu código) -->
