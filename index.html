@@ -20,9 +20,9 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tu Nombre - Desarrollador Full Stack">
-    <meta name="twitter:description" content="Portfolio profesional de desarrollador Full Stack">
-    <meta name="twitter:image" content="./src/assets/images/twitter-card.jpg">
+    <meta name="twitter:title" content="Elvis Donayre - Data Scientist">
+    <meta name="twitter:description" content="Portfolio profesional de Data Scientist">
+    <meta name="twitter:image" content="./src/assets/images/foto_perfil.jpg">
     <meta name="twitter:creator" content="@tu_twitter">
     
     <!-- Favicon -->
@@ -32,7 +32,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/icons/favicon-16x16.png">
     
     <!-- Title -->
-    <title>Elvis Donayre- Data Scientist | Portfolio Profesional</title>
+    <title>Elvis Donayre - Data Scientist | Portfolio Profesional</title>
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,21 +61,22 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Tu Nombre",
+        "name": "Elvis Donayre",
         "jobTitle": "Data Scientist",
         "description": "Elvis Donayre - Data Scientist especializado en Machine Learning y análisis de datos. Python, R, TensorFlow, modelos predictivos, visualización de datos y soluciones de IA para empresas",
         "url": "https://tu-dominio.com",
+        "image": "./src/assets/images/foto_perfil.jpg",
         "sameAs": [
             "https://www.linkedin.com/in/elvis-donayre-data-scientist-analyst/",
             "https://github.com/Elvis-Donayre"
         ],
         "knowsAbout": [
-            "JavaScript",
-            "React",
-            "Node.js",
+            "Data Science",
+            "Machine Learning",
             "Python",
-            "Web Development",
-            "Full Stack Development"
+            "R",
+            "Statistical Analysis",
+            "Predictive Analytics"
         ]
     }
     </script>
@@ -109,6 +110,9 @@
                     <a href="#experience" class="navbar__link" role="menuitem">Experiencia</a>
                 </li>
                 <li role="none">
+                    <a href="#certifications" class="navbar__link" role="menuitem">Certificaciones</a>
+                </li>
+                <li role="none">
                     <a href="#projects" class="navbar__link" role="menuitem">Proyectos</a>
                 </li>
                 <li role="none">
@@ -128,53 +132,85 @@
         <section class="section section--hero" id="home" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero__container">
+                    <!-- Profile Image Section -->
+                    <div class="hero__profile">
+                        <div class="profile-image">
+                            <div class="profile-image__wrapper">
+                                <img src="./src/assets/images/foto_perfil.jpg" alt="Elvis Donayre - Data Scientist" loading="eager" width="400" height="400">
+                                <div class="profile-image__overlay">
+                                    <div class="profile-badge">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Data Scientist</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Section -->
                     <div class="hero__content">
-                        <div class="hero__subtitle">👋 Hola, soy</div>
-                        <h1 class="hero__title" id="hero-title">Elvis Donayre</h1>
+                        <div class="hero__intro">
+                            <span class="hero__greeting">👋 Hola, soy</span>
+                            <h1 class="hero__name" id="hero-title">Elvis Donayre</h1>
+                            <h2 class="hero__role">Data Scientist & Machine Learning Engineer</h2>
+                        </div>
+
                         <p class="hero__description">
-                            Data Scientist apasionado por crear experiencias digitales excepcionales. 
-                            Transformo ideas en código y código en soluciones innovadoras que impactan positivamente 
-                            en la vida de las personas.
+                            Transformo datos complejos en <span class="highlight">insights valiosos</span> que impulsan 
+                            decisiones estratégicas. Especializado en machine learning, análisis predictivo y 
+                            visualización de datos para generar <span class="highlight">impacto real</span> en los negocios.
                         </p>
 
+                        <div class="hero__stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Años de Experiencia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Proyectos Completados</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25%</div>
+                                <div class="stat-label">Mejora en Eficiencia</div>
+                            </div>
+                        </div>
+
                         <div class="hero__actions">
-                            <a href="#projects" class="btn btn--primary">
-                                <i class="fas fa-rocket" aria-hidden="true"></i>
-                                Ver Proyectos
+                            <a href="#projects" class="btn btn--primary btn--large">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                Ver Mis Proyectos
                             </a>
-                            <a href="#contact" class="btn btn--secondary">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                Contactar
+                            <a href="#contact" class="btn btn--secondary btn--large">
+                                <i class="fas fa-comments" aria-hidden="true"></i>
+                                Hablemos
                             </a>
                         </div>
 
-                        <!-- Social Links ahora dentro del contenido del hero -->
-                        <nav class="social-links" aria-label="Enlaces de redes sociales">
-                            <a href="https://github.com/Elvis-Donayre" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <!-- Social Links -->
+                        <nav class="hero__social" aria-label="Enlaces de redes sociales">
+                            <a href="https://github.com/Elvis-Donayre" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/elvis-donayre-data-scientist-analyst/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/elvis-donayre-data-scientist-analyst/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="mailto:ejoel.donayrep@gmail.com" class="social-link" aria-label="Email">
+                            <a href="mailto:ejoel.donayrep@gmail.com" class="social-icon" aria-label="Email">
                                 <i class="fas fa-envelope" aria-hidden="true"></i>
                             </a>
                         </nav>
                     </div>
+                </div>
 
-                    <div class="hero__profile" aria-hidden="true">
-                        <div class="profile-card">
-                            <div class="profile-card__avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="profile-card__title">Data Scientist</div>
-                            <div class="profile-card__subtitle">Machine Learning</div>
-                        </div>
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator-hero">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
                     </div>
+                    <span>Scroll para explorar</span>
                 </div>
             </div>
         </section>
-    </main>
 
         <!-- About Section -->
         <section class="section section--alt" id="about" aria-labelledby="about-title">
@@ -183,21 +219,19 @@
                 <div class="about__content">
                     <div class="about__text">
                         <p>
-                            Soy un desarrollador apasionado con más de [X] años de experiencia creando 
-                            aplicaciones web modernas y escalables. Me especializo en tecnologías 
-                            frontend y backend, siempre buscando las mejores prácticas y las últimas 
-                            tendencias en desarrollo.
+                            Soy un Data Scientist apasionado con amplia experiencia en el análisis de datos 
+                            y machine learning. Me especializo en transformar datos complejos en insights 
+                            accionables que impulsan la toma de decisiones estratégicas en organizaciones.
                         </p>
                         <p>
-                            Mi enfoque se centra en escribir código limpio, crear interfaces intuitivas 
-                            y construir productos que realmente importen. Disfruto colaborar en equipos 
-                            multidisciplinarios y enfrentar desafíos técnicos complejos que me permitan 
-                            crecer profesionalmente.
+                            Mi experiencia en SUNAT me ha permitido desarrollar modelos de machine learning 
+                            que optimizan procesos gubernamentales críticos, mejorando la eficiencia operativa 
+                            y generando ahorros significativos para la institución.
                         </p>
                         <p>
-                            Cuando no estoy programando, me gusta [tus hobbies], contribuir a proyectos 
-                            de código abierto y mantenerme actualizado con las últimas tecnologías del 
-                            ecosistema web.
+                            Cuando no estoy analizando datos, disfruto explorando nuevas tecnologías de IA, 
+                            contribuyendo a proyectos de código abierto y manteniéndome actualizado con las 
+                            últimas tendencias en ciencia de datos y machine learning.
                         </p>
                     </div>
                     
@@ -304,49 +338,9 @@
                             <div class="skill__name">Git</div>
                         </div>
                     </div>
-                    </div>
-                    
-                    <!-- Certificaciones -->
-                    <div class="certifications">
-                        <h3 class="certifications__title">Certificaciones</h3>
-                        <div class="certifications__grid">
-                            <div class="certification-badge">
-                                <a href="https://www.credly.com/badges/87d8d157-cfa5-4d0a-a594-e7834da6470b" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer" 
-                                   class="certification-link"
-                                   aria-label="Ver certificación de Data Analyst en Credly">
-                                    <div class="certification-badge__image">
-                                        <img src="https://images.credly.com/size/340x340/images/015364a4-c68c-4c42-8060-3553118f2ff0/image.png" 
-                                             alt="Google Data Analyst Certificate" 
-                                             loading="lazy"
-                                             width="120"
-                                             height="120"
-                                             decoding="async">
-                                    </div>
-                                    <div class="certification-badge__content">
-                                        <h4 class="certification-badge__title">Data Analyst Certificate</h4>
-                                        <p class="certification-badge__issuer">Google</p>
-                                        <p class="certification-badge__date">2024</p>
-                                    </div>
-                                    <div class="certification-badge__verify">
-                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                        <span>Verificar credencial</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
 
         <!-- Experience Section -->
         <section class="section" id="experience" aria-labelledby="experience-title">
@@ -359,32 +353,77 @@
                         </div>
                         <div class="experience-item__content">
                             <div class="experience-item__header">
-                                <h3 class="experience-item__title">Verificador Auxiliar de cobranza con funciones de Senior Data Analyst</h3>
-                                <div class="experience-item__company"><a href="https://www.sunat.gob.pe/" target="_blank" rel="noopener noreferrer">SUNAT - Superintendencia Nacional de Aduanas y de Administración Tributaria</a></div>
+                                <h3 class="experience-item__title">Verificador Auxiliar de Cobranza con funciones de Senior Data Analyst</h3>
+                                <div class="experience-item__company">
+                                    <a href="https://www.sunat.gob.pe/" target="_blank" rel="noopener noreferrer">
+                                        SUNAT - Superintendencia Nacional de Aduanas y de Administración Tributaria
+                                    </a>
+                                </div>
                                 <div class="experience-item__period">Enero 2022 - Presente</div>
                             </div>
                             <div class="experience-item__description">
                                 <p>
-                                    Lidero el equipo cobranza de ciencia de datos desarrollando modelos de machine learning para
-                                    optimización de procesos de negocio. Implementé un sistema de recomendaciones que
-                                    incrementó las ventas en un 35% y desarrollé pipelines de datos que procesan más
-                                    de 10TB de información diaria.
+                                    Lidero iniciativas de ciencia de datos desarrollando modelos de machine learning para 
+                                    optimización de procesos tributarios. Implementé sistemas de análisis predictivo que 
+                                    mejoraron significativamente la eficiencia en procesos de cobranza y detección de 
+                                    patrones fiscales.
                                 </p>
                                 <ul class="experience-item__achievements">
-                                    <li>Diseñé e implementé 15+ modelos de ML en producción</li>
-                                    <li>Reduje costos operativos en $2M anuales mediante automatización</li>
-                                    <li>Mentoré a 6 junior data scientists</li>
+                                    <li>Desarrollé modelos predictivos que incrementaron la eficiencia de cobranza en un 25%</li>
+                                    <li>Implementé dashboards interactivos que optimizaron la toma de decisiones gerenciales</li>
+                                    <li>Automaticé procesos de análisis de datos, reduciendo tiempos de procesamiento en un 60%</li>
                                 </ul>
                             </div>
                             <div class="experience-item__skills">
                                 <span class="tag">Python</span>
                                 <span class="tag">R</span>
                                 <span class="tag">Power BI</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Machine Learning</span>
                             </div>
                         </div>
                     </article>
                 </div> 
             </div> 
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section section--alt" id="certifications" aria-labelledby="certifications-title">
+            <div class="container">
+                <h2 class="section__title" id="certifications-title">Certificaciones</h2>
+                <div class="certifications__grid">
+                    <div class="certification-badge">
+                        <a href="https://www.credly.com/badges/87d8d157-cfa5-4d0a-a594-e7834da6470b" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="certification-link"
+                           aria-label="Ver certificación de Google Data Analytics en Credly">
+                            <div class="certification-badge__image">
+                                <img src="https://images.credly.com/size/340x340/images/015364a4-c68c-4c42-8060-3553118f2ff0/image.png" 
+                                     alt="Google Data Analytics Certificate" 
+                                     loading="lazy"
+                                     width="120"
+                                     height="120"
+                                     decoding="async">
+                            </div>
+                            <div class="certification-badge__content">
+                                <h3 class="certification-badge__title">Google Data Analytics Certificate</h3>
+                                <p class="certification-badge__issuer">Google</p>
+                                <p class="certification-badge__date">2024</p>
+                                <p class="certification-badge__description">
+                                    Certificación completa en análisis de datos, incluyendo limpieza, 
+                                    análisis y visualización de datos utilizando herramientas como 
+                                    R, SQL, Tableau y Google Sheets.
+                                </p>
+                            </div>
+                            <div class="certification-badge__verify">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                <span>Verificar credencial</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section -->
@@ -394,53 +433,24 @@
                 <div class="projects__grid">
                     <article class="project-card">
                         <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">E-Commerce Platform</h3>
-                            <p class="project-card__description">
-                                Plataforma de comercio electrónico completa con carrito de compras, 
-                                sistema de pagos integrado, panel de administración y gestión de inventario. 
-                                Construida con tecnologías modernas y escalables.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">React</span>
-                                <span class="tag" role="listitem">Node.js</span>
-                                <span class="tag" role="listitem">MongoDB</span>
-                                <span class="tag" role="listitem">Stripe</span>
-                                <span class="tag" role="listitem">AWS</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del proyecto E-Commerce">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="project-card__content">
-                            <h3 class="project-card__title">Dashboard Analytics</h3>
+                            <h3 class="project-card__title">Sistema Predictivo de Cobranza</h3>
                             <p class="project-card__description">
-                                Dashboard interactivo para visualización de datos con gráficos en tiempo real, 
-                                métricas de rendimiento y reportes personalizables. Incluye autenticación 
-                                y roles de usuario.
+                                Modelo de machine learning que predice la probabilidad de cobro exitoso 
+                                utilizando datos históricos y variables socioeconómicas. Implementado 
+                                en producción para optimizar estrategias de cobranza.
                             </p>
                             <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Vue.js</span>
-                                <span class="tag" role="listitem">D3.js</span>
                                 <span class="tag" role="listitem">Python</span>
-                                <span class="tag" role="listitem">FastAPI</span>
+                                <span class="tag" role="listitem">Scikit-learn</span>
+                                <span class="tag" role="listitem">Pandas</span>
                                 <span class="tag" role="listitem">PostgreSQL</span>
+                                <span class="tag" role="listitem">Streamlit</span>
                             </div>
                             <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del Dashboard Analytics">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del proyecto">
                                     <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
                                 </a>
                                 <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
@@ -452,27 +462,28 @@
 
                     <article class="project-card">
                         <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-chart-bar"></i>
                         </div>
                         <div class="project-card__content">
-                            <h3 class="project-card__title">App Móvil Fitness</h3>
+                            <h3 class="project-card__title">Dashboard Ejecutivo de KPIs</h3>
                             <p class="project-card__description">
-                                Aplicación móvil para seguimiento de ejercicios con rutinas personalizadas, 
-                                seguimiento de progreso, integración con wearables y comunidad social 
-                                para motivación mutua.
+                                Dashboard interactivo en Power BI que centraliza métricas clave de 
+                                rendimiento organizacional, con capacidades de drill-down y 
+                                alertas automatizadas para la toma de decisiones ejecutivas.
                             </p>
                             <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">React Native</span>
-                                <span class="tag" role="listitem">Firebase</span>
-                                <span class="tag" role="listitem">Redux</span>
-                                <span class="tag" role="listitem">Expo</span>
+                                <span class="tag" role="listitem">Power BI</span>
+                                <span class="tag" role="listitem">SQL</span>
+                                <span class="tag" role="listitem">DAX</span>
+                                <span class="tag" role="listitem">Azure</span>
+                                <span class="tag" role="listitem">Python</span>
                             </div>
                             <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo de la App Móvil Fitness">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del Dashboard">
                                     <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
                                 </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                <a href="#" class="project-card__link" aria-label="Ver documentación">
+                                    <i class="fas fa-file-alt" aria-hidden="true"></i> Docs
                                 </a>
                             </div>
                         </div>
@@ -483,21 +494,21 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <div class="project-card__content">
-                            <h3 class="project-card__title">AI Chat Assistant</h3>
+                            <h3 class="project-card__title">Análisis de Segmentación de Contribuyentes</h3>
                             <p class="project-card__description">
-                                Asistente de chat inteligente con procesamiento de lenguaje natural, 
-                                integración con APIs de IA, historial de conversaciones y 
-                                personalización de respuestas.
+                                Análisis avanzado de clustering para segmentar contribuyentes basado 
+                                en patrones de comportamiento fiscal, permitiendo estrategias 
+                                diferenciadas de atención y control.
                             </p>
                             <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Next.js</span>
-                                <span class="tag" role="listitem">OpenAI</span>
-                                <span class="tag" role="listitem">TypeScript</span>
-                                <span class="tag" role="listitem">Prisma</span>
+                                <span class="tag" role="listitem">Python</span>
+                                <span class="tag" role="listitem">K-Means</span>
+                                <span class="tag" role="listitem">Plotly</span>
+                                <span class="tag" role="listitem">Jupyter</span>
                             </div>
                             <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del AI Chat Assistant">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                                <a href="#" class="project-card__link" aria-label="Ver análisis completo">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Análisis
                                 </a>
                                 <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
                                     <i class="fab fa-github" aria-hidden="true"></i> GitHub
@@ -508,50 +519,23 @@
 
                     <article class="project-card">
                         <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-calendar-alt"></i>
+                            <i class="fas fa-robot"></i>
                         </div>
                         <div class="project-card__content">
-                            <h3 class="project-card__title">Task Management System</h3>
+                            <h3 class="project-card__title">Automatización de Reportes con IA</h3>
                             <p class="project-card__description">
-                                Sistema de gestión de tareas colaborativo con tableros Kanban, 
-                                seguimiento de tiempo, notificaciones en tiempo real y 
-                                reportes de productividad.
+                                Sistema automatizado que genera reportes inteligentes utilizando 
+                                procesamiento de lenguaje natural para crear resúmenes ejecutivos 
+                                de datos complejos de manera automática.
                             </p>
                             <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Angular</span>
-                                <span class="tag" role="listitem">NestJS</span>
-                                <span class="tag" role="listitem">Socket.io</span>
-                                <span class="tag" role="listitem">Redis</span>
+                                <span class="tag" role="listitem">Python</span>
+                                <span class="tag" role="listitem">NLP</span>
+                                <span class="tag" role="listitem">OpenAI API</span>
+                                <span class="tag" role="listitem">Flask</span>
                             </div>
                             <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del Task Management System">
-                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                                </a>
-                                <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-card__image" aria-hidden="true">
-                            <i class="fas fa-blog"></i>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Blog Platform CMS</h3>
-                            <p class="project-card__description">
-                                Plataforma de blogging con CMS personalizado, editor de contenido avanzado, 
-                                SEO optimizado, comentarios, búsqueda y sistema de suscripciones.
-                            </p>
-                            <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
-                                <span class="tag" role="listitem">Astro</span>
-                                <span class="tag" role="listitem">Markdown</span>
-                                <span class="tag" role="listitem">Sanity</span>
-                                <span class="tag" role="listitem">Vercel</span>
-                            </div>
-                            <div class="project-card__links">
-                                <a href="#" class="project-card__link" aria-label="Ver demo del Blog Platform CMS">
+                                <a href="#" class="project-card__link" aria-label="Ver demo del sistema">
                                     <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
                                 </a>
                                 <a href="#" class="project-card__link" aria-label="Ver código en GitHub">
@@ -571,8 +555,9 @@
                 <div class="contact__content">
                     <div class="contact__info">
                         <p class="contact__intro">
-                            ¿Tienes un proyecto en mente? ¿Quieres colaborar en algo increíble? 
-                            ¡Me encantaría escuchar sobre tu idea y explorar cómo podemos hacerla realidad juntos!
+                            ¿Tienes un proyecto de datos en mente? ¿Necesitas consultoría en Data Science? 
+                            ¡Me encantaría conocer tu desafío y explorar cómo podemos transformar 
+                            tus datos en soluciones innovadoras!
                         </p>
                         
                         <div class="contact-item">
@@ -581,17 +566,17 @@
                             </div>
                             <div class="contact-details">
                                 <h3>Email</h3>
-                                <p>tu.email@ejemplo.com</p>
+                                <p>ejoel.donayrep@gmail.com</p>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <div class="contact-icon" aria-hidden="true">
-                                <i class="fas fa-phone"></i>
+                                <i class="fab fa-linkedin"></i>
                             </div>
                             <div class="contact-details">
-                                <h3>Teléfono</h3>
-                                <p>+1 (555) 123-4567</p>
+                                <h3>LinkedIn</h3>
+                                <p>elvis-donayre-data-scientist-analyst</p>
                             </div>
                         </div>
 
@@ -601,7 +586,7 @@
                             </div>
                             <div class="contact-details">
                                 <h3>Ubicación</h3>
-                                <p>Tu Ciudad, Tu País</p>
+                                <p>Pucallpa, Ucayali, Perú</p>
                             </div>
                         </div>
 
@@ -611,7 +596,7 @@
                             </div>
                             <div class="contact-details">
                                 <h3>Disponibilidad</h3>
-                                <p>Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                                <p>Lunes a Viernes, 9:00 AM - 6:00 PM (UTC-5)</p>
                             </div>
                         </div>
                     </div>
@@ -663,7 +648,7 @@
                                 name="message" 
                                 class="form-textarea"
                                 rows="5" 
-                                placeholder="Cuéntame sobre tu proyecto..." 
+                                placeholder="Cuéntame sobre tu proyecto de datos..." 
                                 required 
                                 aria-describedby="message-error"
                             ></textarea>
@@ -680,13 +665,13 @@
         </section>
     </main>
 
-    <!-- Footer actualizado (sin los iconos de redes sociales) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p class="footer__text">
-                &copy; 2025 Elvis Donayre. Hecho con ❤️ y mucho código.  
+                &copy; 2025 Elvis Donayre. Desarrollado con ❤️ y mucha ciencia de datos.  
                 <br>
-                <small>Portfolio desarrollado con tecnologías web modernas y mejores prácticas.</small>
+                <small>Portfolio creado con tecnologías web modernas y mejores prácticas de desarrollo.</small>
             </p>
         </div>
     </footer>
