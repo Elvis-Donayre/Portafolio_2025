@@ -12,18 +12,18 @@ export class SkillsSlider {
         this.container = null;
         this.track = null;
         this.skillItems = [];
-        this.isPlaying = true;
-        this.isPaused = false;
-        this.animationId = null;
-        this.speed = 1; // Velocidad de desplazamiento
-        this.position = 0;
+        // this.isPlaying = true;
+        // this.isPaused = false;
+        // this.animationId = null;
+        // this.speed = 1; // Velocidad de desplazamiento
+        // this.position = 0;
         
         // Bind methods
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
-        this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
-        this.handleResize = debounce(this.handleResize.bind(this), 250);
-        this.animate = this.animate.bind(this);
+        // this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        // this.handleMouseLeave = this.handleMouseLeave.bind(this);
+        // this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+        // this.handleResize = debounce(this.handleResize.bind(this), 250);
+        // this.animate = this.animate.bind(this);
         
         this.init();
     }
@@ -33,11 +33,7 @@ export class SkillsSlider {
      */
     init() {
         this.cacheElements();
-        this.bindEvents();
-        this.setupIntersectionObserver();
-        this.startAnimation();
-        
-        console.log('✅ Skills Slider initialized');
+        // No más animación ni eventos de slider
     }
 
     /**
@@ -53,7 +49,7 @@ export class SkillsSlider {
             return;
         }
         
-        console.log(`🎯 Found ${this.skillItems.length} skill items`);
+        // No más logs de animación
     }
 
     /**
@@ -63,26 +59,26 @@ export class SkillsSlider {
         if (!this.container) return;
         
         // Mouse events for pause/resume
-        this.container.addEventListener('mouseenter', this.handleMouseEnter);
-        this.container.addEventListener('mouseleave', this.handleMouseLeave);
+        // this.container.addEventListener('mouseenter', this.handleMouseEnter);
+        // this.container.addEventListener('mouseleave', this.handleMouseLeave);
         
         // Touch events for mobile
-        this.container.addEventListener('touchstart', this.handleMouseEnter, { passive: true });
-        this.container.addEventListener('touchend', this.handleMouseLeave, { passive: true });
+        // this.container.addEventListener('touchstart', this.handleMouseEnter, { passive: true });
+        // this.container.addEventListener('touchend', this.handleMouseLeave, { passive: true });
         
         // Window events
-        window.addEventListener('resize', this.handleResize);
-        document.addEventListener('visibilitychange', this.handleVisibilityChange);
+        // window.addEventListener('resize', this.handleResize);
+        // document.addEventListener('visibilitychange', this.handleVisibilityChange);
         
         // Reduced motion preference
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        mediaQuery.addEventListener('change', (e) => {
-            if (e.matches) {
-                this.pause();
-            } else {
-                this.resume();
-            }
-        });
+        // const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        // mediaQuery.addEventListener('change', (e) => {
+        //     if (e.matches) {
+        //         this.pause();
+        //     } else {
+        //         this.resume();
+        //     }
+        // });
         
         // Skill item clicks
         this.skillItems.forEach(item => {
@@ -104,9 +100,9 @@ export class SkillsSlider {
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    this.resume();
+                    // this.resume();
                 } else {
-                    this.pause();
+                    // this.pause();
                 }
             });
         }, options);
@@ -124,32 +120,32 @@ export class SkillsSlider {
             return;
         }
         
-        this.isPlaying = true;
-        this.animate();
+        // this.isPlaying = true;
+        // this.animate();
     }
 
     /**
      * Animation loop
      */
     animate() {
-        if (!this.isPlaying || this.isPaused) {
-            return;
-        }
+        // if (!this.isPlaying || this.isPaused) {
+        //     return;
+        // }
         
         // Incrementar posición
-        this.position += this.speed;
+        // this.position += this.speed;
         
         // Reset cuando llega al 50% (donde está la duplicación)
-        if (this.position >= this.getTrackWidth() / 2) {
-            this.position = 0;
-        }
+        // if (this.position >= this.getTrackWidth() / 2) {
+        //     this.position = 0;
+        // }
         
         // Aplicar transformación
-        if (this.track) {
-            this.track.style.transform = `translateX(-${this.position}px)`;
-        }
+        // if (this.track) {
+        //     this.track.style.transform = `translateX(-${this.position}px)`;
+        // }
         
-        this.animationId = requestAnimationFrame(this.animate);
+        // this.animationId = requestAnimationFrame(this.animate);
     }
 
     /**
@@ -164,19 +160,19 @@ export class SkillsSlider {
      * Pause animation on hover
      */
     handleMouseEnter() {
-        this.isPaused = true;
-        this.addHoverEffect();
+        // this.isPaused = true;
+        // this.addHoverEffect();
     }
 
     /**
      * Resume animation on mouse leave
      */
     handleMouseLeave() {
-        this.isPaused = false;
-        this.removeHoverEffect();
-        if (this.isPlaying) {
-            this.animate();
-        }
+        // this.isPaused = false;
+        // this.removeHoverEffect();
+        // if (this.isPlaying) {
+        //     this.animate();
+        // }
     }
 
     /**
@@ -184,7 +180,7 @@ export class SkillsSlider {
      */
     addHoverEffect() {
         this.skillItems.forEach(item => {
-            item.style.animationPlayState = 'paused';
+            // item.style.animationPlayState = 'paused';
         });
     }
 
@@ -193,7 +189,7 @@ export class SkillsSlider {
      */
     removeHoverEffect() {
         this.skillItems.forEach(item => {
-            item.style.animationPlayState = 'running';
+            // item.style.animationPlayState = 'running';
         });
     }
 
@@ -201,11 +197,11 @@ export class SkillsSlider {
      * Handle visibility change
      */
     handleVisibilityChange() {
-        if (document.hidden) {
-            this.pause();
-        } else {
-            this.resume();
-        }
+        // if (document.hidden) {
+        //     this.pause();
+        // } else {
+        //     this.resume();
+        // }
     }
 
     /**
@@ -213,13 +209,13 @@ export class SkillsSlider {
      */
     handleResize() {
         // Recalcular dimensiones si es necesario
-        if (this.track) {
-            // Forzar recalculo del ancho
-            this.track.style.width = 'auto';
-            setTimeout(() => {
-                this.track.style.width = '';
-            }, 10);
-        }
+        // if (this.track) {
+        //     // Forzar recalculo del ancho
+        //     this.track.style.width = 'auto';
+        //     setTimeout(() => {
+        //         this.track.style.width = '';
+        //     }, 10);
+        // }
     }
 
     /**
@@ -230,7 +226,7 @@ export class SkillsSlider {
         const skillIcon = skillItem.querySelector('.skill-icon i').className;
         
         // Efecto visual de click
-        this.animateClick(skillItem);
+        // this.animateClick(skillItem);
         
         // Dispatch custom event
         this.dispatchEvent(CUSTOM_EVENTS.SKILL_CLICK || 'skill:click', {
@@ -239,52 +235,52 @@ export class SkillsSlider {
             element: skillItem
         });
         
-        console.log(`🎯 Skill clicked: ${skillName}`);
+        // console.log(`🎯 Skill clicked: ${skillName}`);
     }
 
     /**
      * Animate skill click
      */
     animateClick(element) {
-        element.style.transform = 'scale(0.95)';
-        element.style.transition = 'transform 0.1s ease';
+        // element.style.transform = 'scale(0.95)';
+        // element.style.transition = 'transform 0.1s ease';
         
-        setTimeout(() => {
-            element.style.transform = '';
-            element.style.transition = '';
-        }, 100);
+        // setTimeout(() => {
+        //     element.style.transform = '';
+        //     element.style.transition = '';
+        // }, 100);
     }
 
     /**
      * Pause slider
      */
     pause() {
-        this.isPlaying = false;
-        if (this.animationId) {
-            cancelAnimationFrame(this.animationId);
-            this.animationId = null;
-        }
+        // this.isPlaying = false;
+        // if (this.animationId) {
+        //     cancelAnimationFrame(this.animationId);
+        //     this.animationId = null;
+        // }
     }
 
     /**
      * Resume slider
      */
     resume() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            return;
-        }
+        // if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        //     return;
+        // }
         
-        if (!this.isPlaying) {
-            this.isPlaying = true;
-            this.animate();
-        }
+        // if (!this.isPlaying) {
+        //     this.isPlaying = true;
+        //     this.animate();
+        // }
     }
 
     /**
      * Set animation speed
      */
     setSpeed(speed) {
-        this.speed = Math.max(0.1, Math.min(5, speed)); // Clamp between 0.1 and 5
+        // this.speed = Math.max(0.1, Math.min(5, speed)); // Clamp between 0.1 and 5
     }
 
     /**
@@ -292,12 +288,12 @@ export class SkillsSlider {
      */
     getState() {
         return {
-            isPlaying: this.isPlaying,
-            isPaused: this.isPaused,
-            speed: this.speed,
-            position: this.position,
-            skillsCount: this.skillItems.length / 2, // Dividido por 2 por la duplicación
-            trackWidth: this.getTrackWidth()
+            // isPlaying: this.isPlaying,
+            // isPaused: this.isPaused,
+            // speed: this.speed,
+            // position: this.position,
+            // skillsCount: this.skillItems.length / 2, // Dividido por 2 por la duplicación
+            // trackWidth: this.getTrackWidth()
         };
     }
 
@@ -305,23 +301,23 @@ export class SkillsSlider {
      * Toggle slider play/pause
      */
     toggle() {
-        if (this.isPlaying) {
-            this.pause();
-        } else {
-            this.resume();
-        }
+        // if (this.isPlaying) {
+        //     this.pause();
+        // } else {
+        //     this.resume();
+        // }
         
-        return this.isPlaying;
+        // return this.isPlaying;
     }
 
     /**
      * Reset slider position
      */
     reset() {
-        this.position = 0;
-        if (this.track) {
-            this.track.style.transform = 'translateX(0)';
-        }
+        // this.position = 0;
+        // if (this.track) {
+        //     this.track.style.transform = 'translateX(0)';
+        // }
     }
 
     /**
@@ -342,18 +338,18 @@ export class SkillsSlider {
      */
     destroy() {
         // Stop animation
-        this.pause();
+        // this.pause();
         
         // Remove event listeners
         if (this.container) {
-            this.container.removeEventListener('mouseenter', this.handleMouseEnter);
-            this.container.removeEventListener('mouseleave', this.handleMouseLeave);
-            this.container.removeEventListener('touchstart', this.handleMouseEnter);
-            this.container.removeEventListener('touchend', this.handleMouseLeave);
+            // this.container.removeEventListener('mouseenter', this.handleMouseEnter);
+            // this.container.removeEventListener('mouseleave', this.handleMouseLeave);
+            // this.container.removeEventListener('touchstart', this.handleMouseEnter);
+            // this.container.removeEventListener('touchend', this.handleMouseLeave);
         }
         
-        window.removeEventListener('resize', this.handleResize);
-        document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+        // window.removeEventListener('resize', this.handleResize);
+        // document.removeEventListener('visibilitychange', this.handleVisibilityChange);
         
         // Remove skill click listeners
         this.skillItems.forEach(item => {
@@ -367,7 +363,7 @@ export class SkillsSlider {
         
         // Reset styles
         if (this.track) {
-            this.track.style.transform = '';
+            // this.track.style.transform = '';
         }
         
         // Clear references
@@ -375,6 +371,6 @@ export class SkillsSlider {
         this.track = null;
         this.skillItems = [];
         
-        console.log('🧹 Skills Slider destroyed');
+        // console.log('🧹 Skills Slider destroyed');
     }
 }

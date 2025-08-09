@@ -204,7 +204,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
   padding: var(--spacing-lg);
-  transition: var(--transition-all);
+  transition: var(--transition-all), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), border 0.3s cubic-bezier(0.4,0,0.2,1);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -213,9 +213,12 @@
 }
 
 .bento-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
   background: var(--color-bg-glass-hover);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 32px 0 rgba(59, 130, 246, 0.18), 0 1.5px 8px 0 rgba(16, 185, 129, 0.10);
+  border: 2px solid;
+  border-image: linear-gradient(135deg, var(--color-secondary), var(--color-accent)) 1;
+  z-index: 2;
 }
 
 /* Configuración específica del bento grid */
@@ -280,6 +283,10 @@
   border-radius: var(--radius-2xl);
   padding: var(--spacing-md) 0;
   position: relative;
+  /* Nuevo: igualar ancho a otras secciones */
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skills-slider::before {
@@ -306,9 +313,9 @@
 
 .skills-track {
   display: flex;
-  animation: slideSkills 40s linear infinite;
   gap: var(--spacing-md);
   padding: 0 var(--spacing-md);
+  /* animation: slideSkills 40s linear infinite; */
 }
 
 .skills-track:hover {
@@ -391,6 +398,95 @@
 .skill-docker .skill-icon { color: #2496ed; }
 .skill-git .skill-icon { color: #f05032; }
 
+/* === SKILLS SLIDER AGRUPADO === */
+.skills-group {
+  min-width: 320px;
+  margin-right: var(--spacing-xl);
+  background: var(--color-bg-glass);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 4px 24px rgba(59,130,246,0.10);
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
+}
+.skills-group-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(16,185,129,0.08);
+}
+.skills-group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+.skills-group .skill-item {
+  min-width: 110px;
+  min-height: 110px;
+  background: var(--color-bg-glass-hover);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skills-group .skill-item:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59,130,246,0.18);
+  background: var(--color-bg-glass);
+}
+.skills-group .skill-icon {
+  font-size: 2.2rem;
+  margin-bottom: var(--spacing-xs);
+}
+.skills-group .skill-name {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+/* Responsive para skills slider agrupado */
+@media (max-width: 1024px) {
+  .skills-group {
+    min-width: 260px;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  .skills-group-items {
+    gap: var(--spacing-sm);
+  }
+  .skills-group .skill-item {
+    min-width: 90px;
+    min-height: 90px;
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+}
+@media (max-width: 768px) {
+  .skills-track {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  .skills-group {
+    min-width: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  .skills-group-items {
+    justify-content: flex-start;
+  }
+}
+
 /* ==========================================================================
    HERO SECTION - BENTO MODE
    ========================================================================== */
@@ -442,6 +538,14 @@
   gap: var(--spacing-md);
   flex-wrap: wrap;
   margin-bottom: var(--spacing-lg);
+}
+
+.hero__social {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin-top: var(--spacing-md);
 }
 
 /* Profile Image en Bento */
